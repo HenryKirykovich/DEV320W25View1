@@ -1,0 +1,3 @@
+/* Empty placeholder JS file.
+   Page is implemented statically in index.html per assignment.
+   Keep this file here in case you want to add JS later. */

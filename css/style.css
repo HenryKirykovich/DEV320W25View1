@@ -1,0 +1,96 @@
+* { 
+    box-sizing: border-box;
+ }
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.4;
+	color: #222;
+	background: #f6f7fb;
+}
+
+body {
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	color: #222;
+}
+
+/* Avatar sizing and spacing */
+.avatar {
+	width: 160px;
+	height: 160px;
+	object-fit: cover;
+}
+
+@media (min-width: 768px) {
+	.avatar { width: 220px; height: 220px; }
+}
+
+/* Small visual tweaks for right column */
+#name { font-weight:700; }
+#tagline { color: #6c757d; margin-bottom: .75rem; }
+#pitch { margin-bottom: 1rem; }
+
+/* Add extra space under the photo on small screens to avoid overlap */
+@media (max-width: 767.98px) {
+	.row.no-gutters > .col-12.col-md-4 {
+		padding-bottom: 1.5rem;
+	}
+}
+
+
+.left {
+	flex: 0 0 260px;
+	background: #eceef8;
+	padding: 18px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.avatar {
+	display: block;
+	max-width: 100%;
+	max-height: 250px; /* longest dimension will not exceed 250px */
+	width: auto;
+	height: auto;
+	border-radius: 6px;
+}
+
+.right {
+	flex: 1;
+	padding: 24px;
+}
+
+
+#name { margin: 0 0 6px; font-size: 1.6rem; }
+#tagline { margin: 0 0 12px; color: #666; }
+
+.links a { display: inline-block; margin-right: 12px; color: #1a73e8; }
+.projects { margin-top: 12px; display: grid; gap: 12px; }
+
+/* Project card specific styles (do not use .card here) */
+.project-card {
+	background: #fff;
+	border: 1px solid #e6e9ef;
+	border-radius: 10px;
+	padding: 12px 14px;
+	box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+}
+.project-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.project-card p { margin: 0 0 8px; color: #374151; }
+.project-card a { color: #4f46e5; }
+
+/* Utility / older rules (kept for compatibility if used elsewhere) */
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+/* Responsive: stack columns on narrower screens */
+@media (max-width: 700px) {
+	.profile-card { flex-direction: column; }
+	.left { flex: 0 0 auto; padding: 12px; }
+	.avatar { max-width: 250px; max-height: 250px; width: 100%; height: auto; }
+	.right { padding: 16px; }
+}
